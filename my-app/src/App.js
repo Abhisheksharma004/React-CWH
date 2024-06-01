@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 function App() {
   return (
     <>
-      <Navbar brandName="Abhishek" />
+      <Navbar brandName="Abhishek" about="HelloAbout" gallery="HelloGallery" />
     </>
   );
 }

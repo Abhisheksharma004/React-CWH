@@ -27,12 +27,12 @@ export default function Navbar(props) {
             </li>
             <li className="nav-item">
               <a className="nav-link" href="/">
-                About
+                {props.about}
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="/">
-                Gallery
+                {props.gallery}
               </a>
             </li>
             <li className="nav-item">
