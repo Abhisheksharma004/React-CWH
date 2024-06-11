@@ -6,6 +6,7 @@ function App() {
   const [numberAllowed, setNumberAllowed] = useState(false);
   const [charAllowed, setCharAllowed] = useState(false);
   const [password, setPassword] = useState("");
+  const [copyPassword, setCopyPassword] = useState(false);
 
   const passwordGenerator = useCallback(() => {
     let pass = "";
@@ -24,7 +25,9 @@ function App() {
   }, [length, numberAllowed, charAllowed, setPassword]);
 
   useEffect(() => {
-    passwordGenerator();
+    const myPassword =  passwordGenerator();
+    setCopyPassword(myPassword);
+
   }, [length, numberAllowed, charAllowed, passwordGenerator]);
 
   return (
