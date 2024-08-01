@@ -1,15 +1,17 @@
 import { useState } from "react"
 
-function TextBox() {
+function TextBox(props) {
 
     const handleOnClick = () => {
         let newText = text.toUpperCase()
         setText(newText)
+        props.showAlert("Converted To Uppar Case", "success")
     }
 
     const handleOnClickLow = () => {
         let newText = text.toLowerCase()
         setText(newText)
+        props.showAlert("Converted To Lower Case", "success")
     }
     const copyText = () => {
         var text = document.getElementById("myBox");
@@ -44,7 +46,7 @@ function TextBox() {
             <button type="button" className="btn btn-outline-success mx-1" onClick={handleOnClick}>Conver to Upper Case</button>
             <button type="button" className="btn btn-outline-success mx-1" onClick={handleOnClickLow}>Conver to Lower Case</button>
             <button type="button" className="btn btn-outline-success mx-1" onClick={copyText}>Copy Text</button>
-            <button type="button" className="btn btn-outline-success mx-1" onClick={removeExtraspace}>Remove Extre Space</button>
+            <button type="button" className="btn btn-outline-success mx-1" onClick={removeExtraspace}>Remove Extra Space</button>
             <button type="button" className="btn btn-outline-danger mx-1" onClick={ClearText}>Clear Text</button>
         </div>
         <div className="container my-3">
