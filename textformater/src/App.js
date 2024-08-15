@@ -4,7 +4,7 @@ import TextBox from './components/TextBox';
 import Alert from './components/Alert';
 import { useState } from 'react';
 
-function App(props) {
+function App() {
 
   const [alert, setAlert] = useState(null);
 
